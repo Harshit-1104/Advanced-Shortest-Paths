@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+      "vector": "cpp",
+      "queue": "cpp",
+      "utility": "cpp",
+      "limits": "cpp"
+    }
+}

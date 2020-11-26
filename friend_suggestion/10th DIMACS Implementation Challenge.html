@@ -1,0 +1,509 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0059)https://www.cc.gatech.edu/dimacs10/archive/clustering.shtml -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="keywords" content="DIMACS, implementation challenge, graph partitioning, graph clustering">
+<meta name="description" content="">
+
+<title>10th DIMACS Implementation Challenge
+</title>
+<link href="./10th DIMACS Implementation Challenge_files/style.css" rel="stylesheet" type="text/css" media="screen">
+</head>
+
+<body data-gr-c-s-loaded="true">
+<div id="wrapper">
+		<div id="header">
+		<div id="logo">
+			<h3 align="center"><a href="http://www.cc.gatech.edu/dimacs10/index.shtml">— 10th DIMACS Implementation Challenge -
+			Graph Partitioning and Graph Clustering —</a></h3>
+			<p align="center">
+			Co-sponsored by <a href="http://dimacs.rutgers.edu/" title="DIMACS">DIMACS</a> and 
+			by the <a href="http://ccicada.rutgers.edu/">Command, Control, and Interoperability Center for Advanced Data Analysis (CCICADA)</a>,<br>
+			<a href="http://www.pnl.gov/">Pacific Northwest National Laboratory</a>, <a href="http://www.sandia.gov/">Sandia National Laboratories</a>,
+			<a href="http://www.intel.com/">Intel Corporation</a> and <a href="http://www.dfg.de/en/">Deutsche Forschungsgemeinschaft (DFG)</a>
+			</p>
+		</div>
+	</div>
+	<!-- end #header -->
+
+		<div id="menu">
+		<ul>
+          <li> 
+            <a href="https://www.cc.gatech.edu/dimacs10/index.shtml">Home</a> </li>
+		  <li>
+		    <a href="https://www.cc.gatech.edu/dimacs10/participation.shtml">Participation</a> </li>
+          <li>
+            <a href="https://www.cc.gatech.edu/dimacs10/schedule.shtml">Schedule</a> </li>
+          <li class="current_page_item">
+            <a href="https://www.cc.gatech.edu/dimacs10/downloads.shtml">Downloads</a> </li>
+          <li>
+            <a href="https://www.cc.gatech.edu/dimacs10/submission.shtml">Submission</a> </li>
+          <li>
+            <a href="https://www.cc.gatech.edu/dimacs10/workshop.shtml">Workshop</a> </li>
+          <li>
+            <a href="https://www.cc.gatech.edu/dimacs10/organization.shtml">Organization</a> </li>
+          <li>
+            <a href="https://www.cc.gatech.edu/dimacs10/mailing.shtml">Contact</a> </li>
+          <li>
+            <a href="https://www.cc.gatech.edu/dimacs10/links.shtml">Links</a> </li>
+		</ul>
+	</div>
+	<!-- end #menu -->
+
+	<div id="page">
+	<div id="page-bgtop">
+	<div id="page-bgbtm">
+		<div id="content">
+              <div class="post">
+                <h2 class="title">Clustering Instances</h2>
+                <div class="entry">
+				<p>
+				Last graph file update: July 26, 2011, addition of files (descriptions further down):
+				</p><ul>
+				<li><a href="https://www.cc.gatech.edu/dimacs10/archive/data/clustering/G_n_pin_pout.graph.bz2">G_n_pin_pout.graph.bz2</a></li>
+				<li><a href="https://www.cc.gatech.edu/dimacs10/archive/data/clustering/preferentialAttachment.graph.bz2">preferentialAttachment.graph.bz2</a></li>
+				<li><a href="https://www.cc.gatech.edu/dimacs10/archive/data/clustering/smallworld.graph.bz2">smallworld.graph.bz2</a></li>
+				<li><a href="https://www.cc.gatech.edu/dimacs10/archive/data/clustering/uk-2002.graph.bz2">uk-2002.graph.bz2</a></li>
+				<li><a href="https://www.cc.gatech.edu/dimacs10/archive/data/clustering/uk-2007-05.graph.bz2">uk-2007-05.graph.bz2</a></li>
+				</ul>
+				<p></p>
+				<p>
+				 The graphs in this category have been taken from various sources, as listed below. Except where otherwise noted, all graphs have been processed as follows:
+				 
+				 </p><ul>
+				    <li> symmetrized (the union of the graph and its transpose, i.e., all edges are un/bidirectional)</li>
+				    <li> parallel edges have been removed </li>
+				    <li> self-loops have been removed </li>
+				    <li> edges with weight 0 or weight "inf" have been removed </li>
+				    <li> graphs with non-integer weights have been made unweighted </li>
+				    <li> graphs where all weights equal 1 have been made unweighted </li>
+				    <li> weights are only added up if the original graph is directed and contains integer weights </li>
+                                 </ul>
+				 Please note the accompanying conversion notes in the description of each graph, if any, for a deviating description of the preprocessing that has been performed on the original datasets to arrive at the files hosted here.
+				<p></p>
+				<p>
+				
+				The following four datasets are taken from <a href="http://deim.urv.cat/~aarenas/data/welcome.htm">http://deim.urv.cat/~aarenas/data/welcome.htm</a> , with kind permission of Alex Arenas, Dept. Enginyeria Informatica i Matematiques (Computer Science &amp; Mathematics), Universidad Rovira i Virgili.
+				</p>
+				  <table border="0" width="95%" class="tabular" cellspacing="3" cellpadding="7">
+				  <colgroup>
+					<col width="225">
+					<col width="50">
+					<col width="50">
+				  </colgroup>
+				    <tbody><tr><!-- Row 1 -->
+				      <td><b>Graph</b></td><!-- Col 1 -->
+				      <td align="right"><b><i>n</i></b></td><!-- Col 2 -->
+				      <td align="right"><b><i>m</i></b></td><!-- Col 3 -->
+				    </tr>
+				    
+				    <tr> 
+				      <td><b><a href="https://www.cc.gatech.edu/dimacs10/archive/data/clustering/jazz.graph.bz2"> jazz.graph.bz2 </a></b> <br>
+				      Jazz musicians network .
+				      List of edges of the network of Jazz musicians. Data compiled by P.Gleiser and L. Danon , Adv. Complex Syst.6, 565 (2003).</td>
+				      <td align="right"><b><i> 198 </i></b> </td> 
+				      <td align="right"> <b><i>2742 </i> </b> </td> 
+				    </tr>
+				    
+				    <tr> 
+				      <td><b><a href="https://www.cc.gatech.edu/dimacs10/archive/data/clustering/celegans_metabolic.graph.bz2"> celegans_metabolic.graph.bz2 </a></b>: <br>
+				      C. elegans metabolic network.
+				      List of edges of the metabolic network of C.elegans. Community identification using Extremal Optimization J. Duch and A. Arenas, Physical Review E , vol. 72, 027104, (2005).</td>
+				      <td align="right"><b><i> 453 </i></b> </td> 
+				      <td align="right"> <b><i>2025 </i> </b> </td> 
+				    </tr>
+				    
+				    <tr> 
+				      <td><b><a href="https://www.cc.gatech.edu/dimacs10/archive/data/clustering/email.graph.bz2"> email.graph.bz2 </a></b>: <br>
+				      E-mail network URV.
+				      List of edges of the network of e-mail interchanges between members of the Univeristy Rovira i Virgili (Tarragona). Please cite R. Guimera, L. Danon, A. Diaz-Guilera, F. Giralt and A. Arenas, Physical Review E , vol. 68, 065103(R), (2003).</td>
+				      <td align="right"><b><i> 1133 </i></b> </td> 
+				      <td align="right"> <b><i>5451 </i> </b> </td> 
+				    </tr>
+				    
+				    <tr> 
+				      <td><b><a href="https://www.cc.gatech.edu/dimacs10/archive/data/clustering/PGPgiantcompo.graph.bz2"> PGPgiantcompo.graph.bz2 </a></b>: <br>
+				      PGP network.
+				      List of edges of the giant component of the network of users of the Pretty-Good-Privacy algorithm for secure information interchange. M. Boguña, R. Pastor-Satorras, A. Diaz-Guilera and A. Arenas, Physical Review E, vol. 70, 056122 (2004). </td>
+				      <td align="right"><b><i> 10680 </i></b> </td> 
+				      <td align="right"> <b><i>24316 </i> </b> </td> 
+				    </tr>
+				  </tbody></table>
+				  
+				  <p>
+				    The following 16 datasets are taken from <a href="http://www-personal.umich.edu/~mejn/netdata">http://www-personal.umich.edu/~mejn/netdata</a> , with kind permission of Mark Newman, Department of Physics and Center for the Study of Complex Systems, University of Michigan and Santa Fe Institute.
+				  </p>
+				  
+				  <table border="0" width="95%" class="tabular" cellspacing="3" cellpadding="7">
+				  <colgroup>
+					<col width="225">
+					<col width="50">
+					<col width="50">
+				  </colgroup>
+				  
+		                    <tbody><tr><!-- Row 1 -->
+				      <td><b>Graph</b></td><!-- Col 1 -->
+				      <td align="right"><b><i>n</i></b></td><!-- Col 2 -->
+				      <td align="right"><b><i>m</i></b></td><!-- Col 3 -->
+				    </tr>
+		  
+				    <tr> 
+				    <td><b><a href="https://www.cc.gatech.edu/dimacs10/archive/data/clustering/adjnoun.graph.bz2"> adjnoun.graph.bz2 </a></b> <br>
+				    Word adjacencies: adjacency network of common adjectives and nouns in the novel David Copperfield by Charles Dickens. M. E. J. Newman, Phys. Rev. E 74, 036104 (2006).</td>
+				    <td align="right"><b><i> 112 </i></b> </td> 
+				    <td align="right"> <b><i>425 </i> </b> </td> 
+				    </tr>
+
+				    <tr> 
+				    <td><b><a href="https://www.cc.gatech.edu/dimacs10/archive/data/clustering/as-22july06.graph.bz2"> as-22july06.graph.bz2 </a></b> <br>
+				    Internet: a symmetrized snapshot of the structure of the Internet at the level of autonomous systems, reconstructed from BGP tables posted by the University of Oregon Route Views Project. Mark Newman, using data for July 22, 2006.</td>
+				    <td align="right"><b><i> 22963 </i></b> </td> 
+				    <td align="right"> <b><i>48436 </i> </b> </td> 
+				    </tr>
+
+				    <tr> 
+				    <td><b><a href="https://www.cc.gatech.edu/dimacs10/archive/data/clustering/astro-ph.graph.bz2"> astro-ph.graph.bz2 </a></b> <br>
+				    Astrophysics collaborations: weighted network of coauthorships between scientists posting preprints on the Astrophysics E-Print Archive between Jan 1, 1995 and December 31, 1999. M. E. J. Newman, Proc. Natl. Acad. Sci. USA 98, 404-409 (2001).</td>
+				    <td align="right"><b><i> 16706 </i></b> </td> 
+				    <td align="right"> <b><i>121251 </i> </b> </td> 
+				    </tr>
+
+				    <tr> 
+				    <td><b><a href="https://www.cc.gatech.edu/dimacs10/archive/data/clustering/celegansneural.graph.bz2"> celegansneural.graph.bz2 </a></b> <br>
+				    Neural network: A directed, weighted network representing the neural network of C. Elegans. Data compiled by D. Watts and S. Strogatz and made available on the web here. Please cite D. J. Watts and S. H. Strogatz, Nature 393, 440-442 (1998). Original experimental data taken from J. G. White, E. Southgate, J. N. Thompson, and S. Brenner, Phil. Trans. R. Soc. London 314, 1-340 (1986). A note on the conversion: the original graph is directed and contains integer weights. Each undirected edge in the converted graph that represents two directed edges has an edge weight that equals the sum of the weights of these edges.</td>
+				    <td align="right"><b><i> 297 </i></b> </td> 
+				    <td align="right"> <b><i>2148 </i> </b> </td> 
+				    </tr>
+				    
+				    <tr> 
+				    <td><b><a href="https://www.cc.gatech.edu/dimacs10/archive/data/clustering/cond-mat.graph.bz2"> cond-mat.graph.bz2 </a></b> <br>
+				    Condensed matter collaborations 1999: weighted network of coauthorships between scientists posting preprints on the Condensed Matter E-Print Archive between Jan 1, 1995 and December 31, 1999. M. E. J. Newman, The structure of scientific collaboration networks, Proc. Natl. Acad. Sci. USA 98, 404-409 (2001).</td>
+				    <td align="right"><b><i> 16726 </i></b> </td> 
+				    <td align="right"> <b><i>47594 </i> </b> </td> 
+				    </tr>
+				    
+				    <tr> 
+				    <td><b><a href="https://www.cc.gatech.edu/dimacs10/archive/data/clustering/cond-mat-2003.graph.bz2"> cond-mat-2003.graph.bz2 </a></b> <br>
+				    Condensed matter collaborations 2003: updated network of coauthorships between scientists posting preprints on the Condensed Matter E-Print Archive. This version includes all preprints posted between Jan 1, 1995 and June 30, 2003. The largest component of this network, which contains 27519 scientists, has been used by several authors as a test-bed for community-finding algorithms for large networks; see for example J. Duch and A. Arenas, Phys. Rev. E 72, 027104 (2005). M. E. J. Newman, Proc. Natl. Acad. Sci. USA 98, 404-409 (2001).</td>
+				    <td align="right"><b><i> 31163 </i></b> </td> 
+				    <td align="right"> <b><i>120029 </i> </b> </td> 
+				    </tr>
+				    
+				    <tr> 
+				    <td><b><a href="https://www.cc.gatech.edu/dimacs10/archive/data/clustering/cond-mat-2005.graph.bz2"> cond-mat-2005.graph.bz2 </a></b> <br>
+				    Condensed matter collaborations 2005: updated network of coauthorships between scientists posting preprints on the Condensed Matter E-Print Archive. This version includes all preprints posted between Jan 1, 1995 and March 31, 2005. M. E. J. Newman, Proc. Natl. Acad. Sci. USA 98, 404-409 (2001). A note on the conversion: the original graph contains two edges with weight inf, these were removed before making the graph unweighted.</td>
+				    <td align="right"><b><i> 40421 </i></b> </td> 
+				    <td align="right"> <b><i>175691 </i> </b> </td> 
+				    </tr>
+
+				    <tr> 
+				    <td><b><a href="https://www.cc.gatech.edu/dimacs10/archive/data/clustering/dolphins.graph.bz2"> dolphins.graph.bz2 </a></b> <br>
+				    Dolphin social network: an undirected social network of frequent associations between 62 dolphins in a community living off Doubtful Sound, New Zealand. D. Lusseau, K. Schneider, O. J. Boisseau, P. Haase, E. Slooten, and S. M. Dawson, Behavioral Ecology and Sociobiology 54, 396-405 (2003). Thanks to David Lusseau for permission to post these data on this web site..</td>
+				    <td align="right"><b><i> 62 </i></b> </td> 
+				    <td align="right"> <b><i>159 </i> </b> </td> 
+				    </tr>
+
+				    <tr> 
+				    <td><b><a href="https://www.cc.gatech.edu/dimacs10/archive/data/clustering/football.graph.bz2"> football.graph.bz2 </a></b> <br>
+				    American College football: network of American football games between Division IA colleges during regular season Fall 2000. M. Girvan and M. E. J. Newman, Proc. Natl. Acad. Sci. USA 99, 7821-7826 (2002).</td>
+				    <td align="right"><b><i> 115 </i></b> </td> 
+				    <td align="right"> <b><i>613 </i> </b> </td> 
+				    </tr>
+
+				    <tr> 
+				    <td><b><a href="https://www.cc.gatech.edu/dimacs10/archive/data/clustering/hep-th.graph.bz2"> hep-th.graph.bz2 </a></b> <br>
+				    High-energy theory collaborations: weighted network of coauthorships between scientists posting preprints on the High-Energy Theory E-Print Archive between Jan 1, 1995 and December 31, 1999. M. E. J. Newman, Proc. Natl. Acad. Sci. USA 98, 404-409 (2001). </td>
+				    <td align="right"><b><i> 8361 </i></b> </td> 
+				    <td align="right"> <b><i>15751 </i> </b> </td> 
+				    </tr>
+
+				    <tr> 
+				    <td><b><a href="https://www.cc.gatech.edu/dimacs10/archive/data/clustering/karate.graph.bz2"> karate.graph.bz2 </a></b> <br>
+				    Zachary's karate club: social network of friendships between 34 members of a karate club at a US university in the 1970s. W. W. Zachary, An information flow model for conflict and fission in small groups, Journal of Anthropological Research 33, 452-473 (1977).</td>
+				    <td align="right"><b><i> 34 </i></b> </td> 
+				    <td align="right"> <b><i>78 </i> </b> </td> 
+				    </tr>
+
+				    <tr> 
+				    <td><b><a href="https://www.cc.gatech.edu/dimacs10/archive/data/clustering/lesmis.graph.bz2"> lesmis.graph.bz2 </a></b> <br>
+				    Les Miserables: coappearance network of characters in the novel Les Miserables. D. E. Knuth, The Stanford GraphBase: A Platform for Combinatorial Computing, Addison-Wesley, Reading, MA (1993).</td>
+				    <td align="right"><b><i> 77 </i></b> </td> 
+				    <td align="right"> <b><i>254 </i> </b> </td> 
+				    </tr>
+
+				    <tr> 
+				    <td><b><a href="https://www.cc.gatech.edu/dimacs10/archive/data/clustering/netscience.graph.bz2"> netscience.graph.bz2 </a></b> <br>
+				    Coauthorships in network science: coauthorship network of scientists working on network theory and experiment, as compiled by M. Newman in May 2006. M. E. J. Newman, Phys. Rev. E 74, 036104 (2006).</td>
+				    <td align="right"><b><i> 1589 </i></b> </td> 
+				    <td align="right"> <b><i>2742 </i> </b> </td> 
+				    </tr>
+
+				    <tr> 
+				    <td><b><a href="https://www.cc.gatech.edu/dimacs10/archive/data/clustering/polblogs.graph.bz2"> polblogs.graph.bz2 </a></b> <br>
+				    Political blogs: A directed network of hyperlinks between weblogs on US politics, recorded in 2005 by Adamic and Glance. L. A. Adamic and N. Glance, "The political blogosphere and the 2004 US Election", in Proceedings of the WWW-2005 Workshop on the Weblogging Ecosystem (2005). Thanks to Lada Adamic for permission to post these data on this web site. </td>
+				    <td align="right"><b><i> 1490 </i></b> </td> 
+				    <td align="right"> <b><i>16715 </i> </b> </td> 
+				    </tr>
+
+				    <tr> 
+				    <td><b><a href="https://www.cc.gatech.edu/dimacs10/archive/data/clustering/polbooks.graph.bz2"> polbooks.graph.bz2 </a></b> <br>
+				    Books about US politics: A network of books about US politics published around the time of the 2004 presidential election and sold by the online bookseller Amazon.com. Edges between books represent frequent copurchasing of books by the same buyers. The network was compiled by V. Krebs and is unpublished, but can found on Krebs' web site ( http://www.orgnet.com/ ). Thanks to Valdis Krebs for permission to post these data on this web site. </td>
+				    <td align="right"><b><i> 105 </i></b> </td> 
+				    <td align="right"> <b><i>441 </i> </b> </td> 
+				    </tr>
+
+				    <tr> 
+				    <td><b><a href="https://www.cc.gatech.edu/dimacs10/archive/data/clustering/power.graph.bz2"> power.graph.bz2 </a></b> <br>
+				    Power grid: An undirected, unweighted network representing the topology of the Western States Power Grid of the United States. Data compiled by D. Watts and S. Strogatz and made available on the web here. D. J. Watts and S. H. Strogatz, Nature 393, 440-442 (1998). </td>
+				    <td align="right"><b><i> 4941 </i></b> </td> 
+				    <td align="right"> <b><i>6594 </i> </b> </td> 
+				    </tr>
+				    
+				  </tbody></table>
+				  
+				  <p>
+				      The following three datasets are taken from <a href="http://law.dsi.unimi.it/datasets.php">http://law.dsi.unimi.it/datasets.php</a>, and have all been gathered by members and collaborators of the Laboratory of Web Algorithms, University of Milano. We refer to the above site for further details on the datasets. Works that these data sets base upon and should be cited when using the data are:
+				  </p>
+
+				  <p>
+				      inproceedings{BoVWFI, <br>
+					author ="Paolo Boldi and Sebastiano Vigna", <br>
+					title = "The {W}eb{G}raph Framework {I}: {C}ompression Techniques", <br>
+					year = 2004, <br>
+					booktitle="Proc. of the Thirteenth International World Wide Web Conference (WWW 2004)", <br>
+					address="Manhattan, USA", <br>
+					pages="595--601", <br>
+					publisher="ACM Press" <br>
+				      }
+				  </p>
+		
+				  <p>
+				      @inproceedings{BRSLLP, <br>
+					author = "Paolo Boldi and Marco Rosa and Massimo Santini and Sebastiano Vigna", <br>
+					title = "Layered Label Propagation: A MultiResolution Coordinate-Free Ordering  for Compressing Social Networks", <br>
+					booktitle="Proceedings of the 20th international conference on World Wide Web", <br>
+					year = 2011, <br>
+					publisher="ACM Press" <br>
+				      }
+				  
+				  </p>
+
+				  <p>
+				  If the graphs you are using were gathered by UbiCrawler, please acknowledge the usage of UbiCrawler by quoting the following paper: 
+				  </p>
+				  
+				  <p>
+				  @article{BCSU3, <br>
+				    author="Paolo Boldi and Bruno Codenotti and Massimo Santini and Sebastiano Vigna", <br>
+				    title="UbiCrawler: A Scalable Fully Distributed Web Crawler", <br>
+				    journal="Software: Practice \&amp; Experience", <br>
+				    year=2004, <br>
+				    volume=34, <br>
+				    number=8, <br>
+				    pages="711--726" <br>
+				  }
+				  </p>
+				  
+				  <table border="0" width="95%" class="tabular" cellspacing="3" cellpadding="7">
+				  <colgroup>
+					<col width="225">
+					<col width="50">
+					<col width="50">
+				  </colgroup>
+				  
+		            <tbody><tr><!-- Row 1 -->
+				      <td><b>Graph</b></td><!-- Col 1 -->
+				      <td align="right"><b><i>n</i></b></td><!-- Col 2 -->
+				      <td align="right"><b><i>m</i></b></td><!-- Col 3 -->
+				    </tr>
+				    
+				    <tr>
+				    <td><b><a href="https://www.cc.gatech.edu/dimacs10/archive/data/clustering/cnr-2000.graph.bz2"> cnr-2000.graph.bz2 </a></b>: <br>
+				    A very small crawl of the Italian CNR domain</td>
+				    <td align="right"><b><i> 325557 </i></b> </td> 
+				    <td align="right"> <b><i>2738969 </i> </b> </td> 
+				    </tr>
+				    
+				    <tr> 
+				    <td><b><a href="https://www.cc.gatech.edu/dimacs10/archive/data/clustering/eu-2005.graph.bz2"> eu-2005.graph.bz2 </a></b>: <br>
+				    A small crawl of the .eu domain</td>
+				    <td align="right"><b><i> 862664 </i></b> </td> 
+				    <td align="right"> <b><i>16138468 </i> </b> </td> 
+				    </tr>
+				    
+		            <tr> 
+				    <td><b><a href="https://www.cc.gatech.edu/dimacs10/archive/data/clustering/in-2004.graph.bz2"> in-2004.graph.bz2 </a></b>: <br>
+				    A small crawl of the .in domain performed for the Nagaoka University of Technology</td>
+				    <td align="right"><b><i> 1382908 </i></b> </td> 
+				    <td align="right"> <b><i>13591473 </i> </b> </td> 
+				    </tr>
+					
+		            <tr> 
+				    <td><b><a href="http://www.cc.gatech.edu/dimacs10/archive/data/clustering/uk-2002.graph.bz2"> uk-2002.graph.bz2 </a></b>: <br>
+				    This graph has been obtained from a 2002 crawl of the .uk domain performed by UbiCrawler.</td>
+				    <td align="right"><b><i> 18520486 </i></b> </td> 
+				    <td align="right"> <b><i>261787258 </i> </b> </td> 
+				    </tr>
+				    
+		            <tr> 
+				    <td><b><a href="http://www.cc.gatech.edu/dimacs10/archive/data/clustering/uk-2007-05.graph.bz2">uk-2007-05.graph.bz2 </a></b>: <br>
+				    This graph is a time-aware graph generated by combining twelve monthly snapshot of the .uk domain collected for the DELIS project. You might be interested in the fact that the format the authors of this graph use compresses it as to use only 1.207 bits/link.</td>
+				    <td align="right"><b><i> 105896555 </i></b> </td> 
+				    <td align="right"> <b><i>3301876564 </i> </b> </td> 
+				    </tr>
+
+				  </tbody></table>
+				  
+				  <p>
+				    The following two networks are road networks taken from the benchmark of the 9th DIMACS Implementation Challenge on shortest paths (see <a href="http://www.dis.uniroma1.it/~challenge9/download.shtml">http://www.dis.uniroma1.it/~challenge9/download.shtml</a>)
+				  </p>
+				  
+				  <table border="0" width="95%" class="tabular" cellspacing="3" cellpadding="7">
+				  <colgroup>
+					<col width="225">
+					<col width="50">
+					<col width="50">
+				  </colgroup>
+				  
+				  <tbody><tr><!-- Row 1 -->
+				    <td><b>Graph</b></td><!-- Col 1 -->
+				    <td align="right"><b><i>n</i></b></td><!-- Col 2 -->
+				    <td align="right"><b><i>m</i></b></td><!-- Col 3 -->
+				  </tr>
+				  
+				  <tr> 
+				  <td><b><a href="https://www.cc.gatech.edu/dimacs10/archive/data/clustering/road_central.graph.bz2"> road_central.graph.bz2 </a></b></td>
+				  <td align="right"><b><i> 14081816 </i></b> </td> 
+				  <td align="right"> <b><i>16933413 </i> </b> </td> 
+				  </tr>
+
+				  <tr> 
+				  <td><b><a href="https://www.cc.gatech.edu/dimacs10/archive/data/clustering/road_usa.graph.bz2"> road_usa.graph.bz2 </a></b></td>
+				  <td align="right"><b><i> 23947347 </i></b> </td> 
+				  <td align="right"> <b><i>28854312 </i> </b> </td> 
+				  </tr>
+				  </tbody></table>
+				  
+				  
+				  <p>
+				  The following graph is taken from Vladimir Batagelj and Andrej Mrvar (2006): Pajek datasets (<a href="http://vlado.fmf.uni-lj.si/pub/networks/data/">http://vlado.fmf.uni-lj.si/pub/networks/data/</a>)
+				  </p>
+				  
+				  <table border="0" width="95%" class="tabular" cellspacing="3" cellpadding="7">
+				  <colgroup>
+					<col width="225">
+					<col width="50">
+					<col width="50">
+				  </colgroup>
+				  
+				  <tbody><tr><!-- Row 1 -->
+				    <td><b>Graph</b></td><!-- Col 1 -->
+				    <td align="right"><b><i>n</i></b></td><!-- Col 2 -->
+				    <td align="right"><b><i>m</i></b></td><!-- Col 3 -->
+				  </tr>
+				  
+				  <tr> 
+				  <td><b><a href="https://www.cc.gatech.edu/dimacs10/archive/data/clustering/chesapeake.graph.bz2"> chesapeake.graph.bz2 </a></b> <br>
+				  Chesapeake Bay Mesohaline Network; D. Baird; Umcees Ref No. XXX-86; MGC/M2/SUM 1
+				  from datall.zip from <a href="http://www.cbl.cees.edu/~ulan/ntwk/network.html">http://www.cbl.cees.edu/~ulan/ntwk/network.html</a>
+				  Chesapeake Bay mesohaline ecosystem. Summer carbon flows.
+				  Baird, D. and R.E. Ulanowicz. 1989. The seasonal dynamics of the
+				  Chesapeake Bay ecosystem. Ecol. Monogr. 59: 329-364.
+				  transformed from SCOR format by Scor2net 15.7.2003
+				  </td>
+				  <td align="right"><b><i> 39 </i></b> </td> 
+				  <td align="right"> <b><i>170 </i> </b> </td> 
+				  </tr>
+				  </tbody></table>
+				  
+				  <p>
+				    Other graphs:
+				  </p>
+				  <table border="0" width="95%" class="tabular" cellspacing="3" cellpadding="7">
+				  <colgroup>
+					<col width="225">
+					<col width="50">
+					<col width="50">
+				  </colgroup>
+				  
+				  <tbody><tr><!-- Row 1 -->
+				    <td><b>Graph</b></td><!-- Col 1 -->
+				    <td align="right"><b><i>n</i></b></td><!-- Col 2 -->
+				    <td align="right"><b><i>m</i></b></td><!-- Col 3 -->
+				  </tr>
+		
+				  <tr> 
+				  <td><b><a href="https://www.cc.gatech.edu/dimacs10/archive/data/clustering/caidaRouterLevel.graph.bz2"> caidaRouterLevel.graph.bz2 </a></b><br>
+				  The Cooperative Association for Internet Data Analysis (CAIDA) investigates the structure of the Internet and releases measurements of the adjacency matrix of the Internet router-level graph. This graph is the undirected network available from <a href="http://www.caida.org/tools/measurement/skitter/router_topology/"> the CAIDA homepage</a>. The data has been collected by CAIDA between Apr 21 and May 8, 2003.
+				  </td><td align="right"><b><i> 192244 </i></b> </td> 
+				  <td align="right"> <b><i>609066 </i> </b> </td> 
+				  </tr>
+				  
+				  <tr><td><b><a href="https://www.cc.gatech.edu/dimacs10/archive/data/clustering/preferentialAttachment.graph.bz2"> preferentialAttachment.graph.bz2 </a></b><br>
+				  This graph has been generated following a preferential attachment process (see Barabási and Albert, "Emergence of scaling in random networks", Science, 1999). Starting with a clique of five vertices, the vertices are successively added to the graph. Each new vertex chooses exactly five neighbors among the existing vertices, such that the probability of choosing a particular vertex is proportional to its degree. In our implementation, a vertex can choose a neighbour only once, such that the resulting random graph is guaranteed to be simple.    
+				  </td><td align="right"><b><i> 100000 </i></b> </td> 
+				  <td align="right"> <b><i>499985 </i> </b> </td> 
+				  </tr>
+
+				  <tr> 
+				  <td><b><a href="https://www.cc.gatech.edu/dimacs10/archive/data/clustering/smallworld.graph.bz2"> smallworld.graph.bz2 </a></b><br>
+			          This graph has been generated using the small world generator of the <a href="http://www.boost.org/doc/libs/1_47_0/libs/graph/doc/index.html"> Boost Graph Library</a>. Starting with a ring of 100000 vertices and 500000 edges, edges are rewired with a probability of 0.2 according to the random model of Watts and Strogatz (see Watts and Strogatz, "Collective Dynamics of Small-World Networks", Nature, 1998). Multiple edges are removed after the process.
+				  </td><td align="right"><b><i> 100000 </i></b> </td> 
+				  <td align="right"> <b><i>499998 </i> </b> </td> 
+				  </tr>
+				  
+				  <tr> 
+				  <td><b><a href="https://www.cc.gatech.edu/dimacs10/archive/data/clustering/G_n_pin_pout.graph.bz2"> G_n_pin_pout.graph.bz2 </a></b><br>
+			          This graph has been generated using a two-level Gnp random-graph generator. First, each vertex chooses a cluster to belong to, iid randomly. Then, in the spirit of the Erdös-Rényi model, cluster-internal edges are created with a given internal probability each, then cluster-external edges are created with a smaller external probability each. The parameters for this instance are: 100000 vertices, 316 clusters, the internal and the external edge probability are chosen such that the expected number of cluster-internal and the expected number of cluster-external incidences of a node are both five. Such a graph is simple. For references, details and a dynamic version see <a href="http://i11www.iti.uni-karlsruhe.de/en/projects/spp1307/dyngen"> this project page</a>.
+				  </td><td align="right"><b><i> 100000 </i></b> </td> 
+				  <td align="right"> <b><i>501198 </i> </b> </td> 
+				  </tr>
+
+<!--				  
+
+				  
+						  <tr> 
+				  <td><b><a href="citationCiteseer.graph.bz2"> citationCiteseer.graph.bz2 </a></b></td>
+				  <td align="right"><b><i> 268495 </i></b> </td> 
+				  <td align="right"> <b><i>1156647 </i> </b> </td> 
+				  </tr>
+
+
+				  <tr> 
+				  <td><b><a href="coAuthorsDBLP.graph.bz2"> coAuthorsDBLP.graph.bz2 </a></b></td>
+				  <td align="right"><b><i> 299067 </i></b> </td> 
+				  <td align="right"> <b><i>977676 </i> </b> </td> 
+				  </tr>-->
+				  </tbody></table>
+				  <p>
+				    The set of <a href="https://www.cc.gatech.edu/dimacs10/archive/coauthor.shtml"> bibliometric graphs</a> is also part of the testbed for the clustering challenge, but the files are not repeated here. Please visit the corresponding page to obtain them.
+				  </p>
+ 		  
+				<p></p>
+                </div>
+                
+ 
+              </div>
+		<div style="clear: both;">&nbsp;</div>
+		</div>
+		<!-- end #content -->
+				<div id="sidebar">
+        </div>
+        <!-- end #sidebar -->
+		<div style="clear: both;">&nbsp;</div>
+
+	</div>
+	</div>
+	</div>
+	<!-- end #page -->
+</div>
+		<div id="footer">
+		<p>Website created and <a href="https://www.cc.gatech.edu/dimacs10/sidebar.html"></a>maintained by <a href="http://www.cc.gatech.edu/~hmeyerhe" target="_blank">Henning Meyerhenke</a>.
+		   Design based on the template <a target="_blank" href="http://www.freecsstemplates.org/preview/deviation/"><i>Deviation</i></a> 
+		   by <a target="_blank" href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+		</p>
+	</div>
+	<!-- end #footer -->
+
+
+
+</body></html>
